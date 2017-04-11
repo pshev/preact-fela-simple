@@ -36,9 +36,9 @@
     ]
   },
   "dependencies": {
-    "fela": "4.3.2",
-    "fela-dom": "4.3.2",
-    "map-values": "1.0.1",
-    "preact": "7.2.1"
+    "fela": "^4.0.0",
+    "fela-dom": "^4.0.0",
+    "map-values": "^1.0.0",
+    "preact": "*"
   }
 }
