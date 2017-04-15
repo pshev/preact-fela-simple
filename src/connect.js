@@ -8,7 +8,7 @@ export function connect(rules) {
 	return WrappedComponent => (props, context) => {
 		const newProps = {
 			...props,
-			styles: mapValues(finalRules, context.renderer.renderRule)
+			styles: mapValues(finalRules, rule => context.renderer.renderRule(rule.bind(null, props)))
 		}
 
 		return <WrappedComponent {...newProps} />
