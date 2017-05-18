@@ -4,7 +4,8 @@ import { render } from 'fela-dom'
 export class Provider extends Component {
 	getChildContext() {
 		return {
-			renderer: this.props.renderer
+			renderer: this.props.renderer,
+			theme: this.props.theme
 		}
 	}
 
