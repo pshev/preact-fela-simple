@@ -12,13 +12,12 @@ You can also give it a `theme` property to make it available for the components 
 
 ```js
 import createRenderer from 'fela'
-import Provider from 'preact-fela-simple'
+import {Provider} from 'preact-fela-simple'
 
 const htmlRenderer = Preact.render
 const styleRenderer = createRenderer()
 
 const htmlMountNode = document.getElementById('root')
-const styleMountNode = document.getElementById('stylesheet')
 
 const theme = {
   mainColor: 'peachpuff',
@@ -26,15 +25,15 @@ const theme = {
 }
 
 htmlRenderer((
-	<Provider renderer={styleRenderer} theme={theme} mountNode={styleMountNode}>
+	<Provider renderer={styleRenderer} theme={theme}>
 		<Root />
 	</Provider>
-), htmlMountNode, root)
+), htmlMountNode.parentNode, htmlMountNode)
 ```
 
 ##### style
 
-`style` is a HOC that is used to add styling to existing Preact components.<br/>
+`style` is a HOC that is used to add styling to Preact components.<br/>
 It takes either a styles object or a function that returns a styles object given your `theme` and current component's `props`.
 
 ###### basic use
