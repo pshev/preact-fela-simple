@@ -1,4 +1,4 @@
-import { h } from 'preact'
+import {h} from 'preact'
 import mapValues from 'map-values'
 
 export function connect(rules) {

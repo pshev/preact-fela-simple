@@ -1,22 +1,33 @@
-import { Component } from 'preact'
-import { render } from 'fela-dom'
+import {Component} from 'preact'
+import {render, rehydrate} from 'fela-dom'
+
+function hasDOM(renderer) {
+  return !renderer.isNativeRenderer && typeof window !== 'undefined'
+}
 
 export class Provider extends Component {
-	getChildContext() {
-		return {
-			renderer: this.props.renderer,
-			theme: this.props.theme
-		}
-	}
+  constructor(props, context) {
+    super(props, context)
 
-	componentDidMount() {
-    const { mountNode, renderer } = this.props
+    if (props.rehydrate && hasDOM(props.renderer)) {
+      rehydrate(props.renderer)
+    }
+  }
 
-    if (mountNode)
-      render(renderer, mountNode)
-	}
+  getChildContext() {
+    return {
+      renderer: this.props.renderer,
+      theme: this.props.theme
+    }
+  }
 
-	render() {
-		return this.props.children[0]
-	}
+  componentDidMount() {
+    const {renderer} = this.props
+    if (hasDOM(renderer))
+      render(renderer)
+  }
+
+  render() {
+    return this.props.children[0]
+  }
 }
