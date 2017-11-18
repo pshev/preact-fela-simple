@@ -1,6 +1,6 @@
 {
   "name": "preact-fela-simple",
-  "version": "3.0.4",
+  "version": "3.1.0",
   "description": "Super simple preact bindings for fela",
   "main": "index.js",
   "scripts": {
@@ -17,12 +17,12 @@
     "babel-plugin-transform-object-rest-spread": "6.23.0",
     "babel-preset-es2015": "6.24.0",
     "babel-preset-react": "6.23.0",
-    "babel-preset-stage-2": "6.22.0"
+    "babel-preset-stage-2": "6.24.1"
   },
   "dependencies": {
     "fela": ">=4.0.0",
     "fela-dom": ">=4.0.0",
     "map-values": "^1.0.0",
-    "preact": "*"
+    "preact": ">=5.0.0"
   }
 }

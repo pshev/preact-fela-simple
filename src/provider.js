@@ -9,9 +9,11 @@ export class Provider extends Component {
   constructor(props, context) {
     super(props, context)
 
-    if (props.rehydrate && hasDOM(props.renderer)) {
+    if (props.rehydrate === undefined)
+      props.rehydrate = true
+
+    if (props.rehydrate && hasDOM(props.renderer))
       rehydrate(props.renderer)
-    }
   }
 
   getChildContext() {
