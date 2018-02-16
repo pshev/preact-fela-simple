@@ -2,9 +2,12 @@
   "name": "preact-fela-simple",
   "version": "3.1.1",
   "description": "Super simple preact bindings for fela",
-  "main": "index.js",
+  "source": "src/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.m.js",
+  "jsnext:main": "dist/index.m.js",
   "scripts": {
-    "build": "babel --out-dir . --ignore *.test.js src"
+    "build": "microbundle"
   },
   "repository": {
     "type": "git",
@@ -21,10 +24,6 @@
     "map-values": "^1.0.0"
   },
   "devDependencies": {
-    "babel-cli": "6.24.0",
-    "babel-plugin-transform-object-rest-spread": "6.23.0",
-    "babel-preset-es2015": "6.24.0",
-    "babel-preset-react": "6.23.0",
-    "babel-preset-stage-2": "6.24.1"
+    "microbundle": "0.4.3"
   }
 }

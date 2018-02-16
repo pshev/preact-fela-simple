@@ -1,5 +1,3 @@
 .idea
 node_modules
-/index.js
-/connect.js
-/provider.js
+/dist
