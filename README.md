@@ -56,7 +56,8 @@ htmlRenderer((
 ##### style
 
 `style` is a HOC that is used to add styling to Preact components.<br/>
-It takes either a styles object or a function that returns a styles object given the current component's `props`.
+It takes either a styles object or a function that returns a styles object given the current component's `props`.<br/>
+What that means is that if the rules don't need `props` or `theme`, you don't have to bother creating them as functions.
 
 ###### basic use
 
