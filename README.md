@@ -1,14 +1,14 @@
 # preact-fela-simple
 <p align="center" style="margin-top: 15px">
-	<img alt="Fela" src="https://cldup.com/cB6srJGgDY.png">
+  <img alt="Fela" src="https://cldup.com/cB6srJGgDY.png">
 </p>
 <p align="center">
-	<strong>Simple and tiny preact bindings for fela</strong>
-	<br>
-	<br>
-	<img src="https://img.shields.io/npm/v/preact-fela-simple.svg?style=flat-square" alt="npm">
-	<img alt="gzipped size" src="https://img.shields.io/badge/gzipped-~350b-brightgreen.svg">
-	<img alt="npm downloads" src="https://img.shields.io/npm/dm/preact-fela-simple.svg">
+  <strong>Simple and tiny preact bindings for fela</strong>
+  <br>
+  <br>
+  <img src="https://img.shields.io/npm/v/preact-fela-simple.svg?style=flat-square" alt="npm">
+  <img alt="gzipped size" src="https://img.shields.io/badge/gzipped-~350b-brightgreen.svg">
+  <img alt="npm downloads" src="https://img.shields.io/npm/dm/preact-fela-simple.svg">
 </p>
 
 ### Motivation
@@ -34,6 +34,7 @@ Wrap your root component in a `Provider` to put fela's `renderer` on the context
 You can also give it a `theme` property to make it available for the components styled with the `style` HOC.
 
 ```js
+import Preact, {h} from 'preact'
 import createRenderer from 'fela'
 import {Provider} from 'preact-fela-simple'
 
@@ -46,9 +47,9 @@ const theme = {
 }
 
 htmlRenderer((
-	<Provider renderer={styleRenderer} theme={theme}>
-		<Root />
-	</Provider>
+  <Provider renderer={styleRenderer} theme={theme}>
+    <Root />
+  </Provider>
 ), document.getElementById('root'))
 ```
 
@@ -64,9 +65,9 @@ import {h} from 'preact'
 import {style} from 'preact-fela-simple'
 
 const Button = ({styles}) => 
-	<button className={styles.button}>
-		Hello world
-	</button>
+  <button className={styles.button}>
+    Hello world
+  </button>
 
 export default style({
   button: {
@@ -79,13 +80,13 @@ export default style({
 ###### using a theme
 
 ```js
-import { h } from 'preact'
+import {h} from 'preact'
 import {style} from 'preact-fela-simple'
 
 const Button = ({styles}) => 
-	<button className={styles.button}>
-		Hello world
-	</button>
+  <button className={styles.button}>
+    Hello world
+  </button>
 
 export default style(({theme}) => ({
   button: {
@@ -102,9 +103,9 @@ import {h} from 'preact'
 import {style} from 'preact-fela-simple'
 
 const Button = ({styles}) => 
-	<button className={styles.button}>
-		Hello world
-	</button>
+  <button className={styles.button}>
+    Hello world
+  </button>
 
 export default style(({primary}) => ({
   button: {
