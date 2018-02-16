@@ -1,6 +1,6 @@
 {
   "name": "preact-fela-simple",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Super simple preact bindings for fela",
   "source": "src/index.js",
   "main": "dist/index.js",
